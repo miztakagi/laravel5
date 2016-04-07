@@ -1,6 +1,19 @@
 <?php
 
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Application Environment
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "environment" your application is currently
+    | running in. This may determine how you prefer to configure various
+    | services your application utilizes. Set this in your ".env" file.
+    |
+    */
+
+    //'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -13,7 +26,8 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG'),
+	//'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +40,9 @@ return [
 	|
 	*/
 
-	'url' => 'http://localhost',
+    //'url' => env('APP_URL', 'https://nonovel.jp/'),
+    'url' => env('APP_URL', 'http://localhost'),
+
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +55,8 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+    //'timezone' => 'UTC',
+    'timezone' => 'Asia/Tokyo',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +69,8 @@ return [
 	|
 	*/
 
-	'locale' => 'en',
+    //'locale' => 'en',
+    'locale' => 'ja',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,7 +83,8 @@ return [
 	|
 	*/
 
-	'fallback_locale' => 'en',
+    //'fallback_locale' => 'en',
+    'fallback_locale' => 'ja',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,9 +97,11 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY', 'SomeRandomString'),
+    //'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY'),
 
-	'cipher' => MCRYPT_RIJNDAEL_128,
+    //'cipher' => 'jAd-tY8Hux4wAj6yAn4_op0zoC5e-8ci',
+    'cipher' => MCRYPT_RIJNDAEL_128,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -95,7 +116,8 @@ return [
 	|
 	*/
 
-	'log' => 'daily',
+    //'log' => 'daily',
+    'log' => env('APP_LOG', 'single'),
 
 	/*
 	|--------------------------------------------------------------------------
