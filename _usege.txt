@@ -1,0 +1,77 @@
+$ vagrant box add laravel/homestead
+$ cd /Volumes/work
+$ git clone https://github.com/laravel/homestead.git Homestead
+$ cd /Volumes/work/Homestead
+$ bash init.sh
+$ composer create-project laravel/laravel laravel --prefer-dist
+
+~/.homestead/Homestead.yaml // 編集
+	folders:
+		- map: /Volumes/work/Homestead
+		  to: /vagrant
+
+	sites:
+		- map: homestead.app
+		  to: /vagrant/laravel/public
+
+/etc/hosts // 編集
+	192.168.10.10  homestead.app
+
+$ vagrant up
+$ cd /Volumes/work/Homestead
+$ vagrant ssh
+# cd /vagrant/laravel/public
+
+--- DB初期化サンプル - users/password_rset
+# serve homestead.app /vagrant/laravel/public
+# cd /vagrant/laravel
+# php artisan migrate
+
+// アクセス
+http://homestead.app
+http://homestead.app/home
+
+DB : MySQL
+DB NAME : homestead
+DB User : homestead
+DB Pass : secret
+DB port : 33060
+
+		'mysql' => [
+			'driver'    => 'mysql',
+			'host'      => env('DB_HOST', 'localhost'),
+			'port'      => env('DB_PORT', '3306'),
+			'database'  => env('DB_DATABASE', 'laravel'),
+			'username'  => env('DB_USERNAME', 'nonovel'),
+			'password'  => env('DB_PASSWORD', 'ged4Lam8yan2vim6'),
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => 'm_',
+			'strict'    => false,
+			'engine'    => null,
+		],
+
+		'pgsql' => [
+			'driver'   => 'pgsql',
+			'host'     => env('DB_HOST', 'localhost'),
+			'port'     => env('DB_PORT', '5432'),
+			'database' => env('DB_DATABASE', 'laravel'),
+			'username' => env('DB_USERNAME', 'nonovel'),
+			'password' => env('DB_PASSWORD', 'vAn9vips6yued1cA'),
+			'charset'  => 'utf8',
+			'prefix'   => 'pg_',
+			'schema'   => 'public',
+		],
+
+
+// 各種設定
+
+$ vagrant up
+$ cd /Volumes/work/Homestead
+$ vagrant ssh
+# cd /vagrant/laravel
+# php artisan make:controller SampleController // コントローラーの作成
+-- Route::resource('sample','SampleController'); // routes.phpに下記を追加
+-- // app/resources/viewsフォルダにsample.blade.php(ビューファイル)を作成
+# php artisan route:cache // ルートキャッシュ：Route::controller() Route::resource()等のルーティングの登録時間を短縮するために、app/Http/route.phpファイルを読み込む代わりに、キャシュされたルートファイルを登録利用する
+# php artisan route:clear // ルートキャッシュ削除

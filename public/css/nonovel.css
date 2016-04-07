@@ -8,13 +8,56 @@
 |
 */
 
-.w100p {
+nav.navbar {
+  ---position: fixed;
+  top: 0;
   width: 100%;
+  border: 0px solid transparent;
+}
+nav.navbar.navbar-default {
+  background-color: #FFF;
+  border-bottom: 5px solid #9de9bc;
+  margin-bottom: 10px;
+}
+div#bs-example-navbar-collapse-1.navbar-collapse.collapse.in li {
+  float:right;
+  margin-top: 10px;
+}
+div#bs-example-navbar-collapse-1.navbar-collapse.collapse.in li a {
+  padding: 0 20px 5px 20px;
+}
+.nav-search {
+  width: 50%;
+  min-width: 200px;
+  padding: 0 120px;
 }
 
-#container {
+/* responsive mobile first : デフォルト 479px以下用（スマートフォン用）の記述 */
+div.container {
+  height: 100%;
+}
+@media screen and (min-width: 480px) {
+    /* 480px以上用（タブレット／スマートフォン用）の記述 */
+    div.container
+      height: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    /* 768px以上用（タブレット用）の記述 */
+    div.container {
+      height: 100%;
+    }
+}
+@media screen and (min-width: 980px) {
+    /* 980px以上用（PC用）の記述 */
+    div.container {
+      min-height: 640px;
+    }
+}
+
+/* 幅設定 */
+.w100p {
   width: 100%;
-  text-align: center;
 }
 
 #footerMenu {
