@@ -1,0 +1,168 @@
+// Color variables (appears count calculates by raw css)
+@color0: #00a39a; // Appears 5 times
+@color1: #bbbbbb; // Appears 3 times
+@color2: #6499a2; // Appears 3 times
+@color3: #82979f; // Appears 2 times
+@color4: #ffffff; // Appears 2 times
+@color5: #9fafb5; // Appears 1 time
+@color6: #e8eded; // Appears 1 time
+
+// Width variables (appears count calculates by raw css)
+@width0: 1086px; // Appears 1 time
+@width1: 100%; // Appears 2 times
+
+// Height variables (appears count calculates by raw css)
+@height0: 100%; // Appears 1 time
+@height1: 74px; // Appears 1 time
+@height2: 0px; // Appears 1 time
+@height3: 640px; // Appears 1 time
+
+@font-family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
+
+html {
+	background-color: @color4;
+}
+body {
+	color: @color3;
+	font-family: @font-family-sans-serif;
+}
+a {
+	&:link {
+		color: @color2;
+	}
+	&:visited {
+		color: @color2;
+	}
+	&:active {
+		color: @color2;
+	}
+	&:hover {
+		color: @color0;
+	}
+}
+.button {
+	&:hover {
+		border-color: @color0;
+		color: @color0;
+	}
+}
+.input {
+	&:hover {
+		border-color: @color0;
+	}
+	&:focus {
+		border-color: @color0;
+	}
+}
+span#subtitle1 {
+	display: inline-block;
+	margin-top: 10px;
+}
+span#subtitle2 {
+	display: none;
+}
+.container {
+	max-width: @width0;
+}
+.w100p {
+	width: @width1;
+}
+.f90p {
+	font-size: 90%;
+}
+.f120p {
+	font-size: 120%;
+}
+i.fa {
+	padding-right: 3px;
+	vertical-align: baseline;
+}
+#footerMenu {
+	-moz-box-shadow:0px -3px 6px -3px @color1;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-box-shadow:0px -3px 6px -3px @color1;
+	-webkit-transition: all 0.3s ease-in-out;
+	background: @color6;
+	bottom: -40px;
+	box-shadow:0px -3px 6px -3px @color1;
+	color: @color3;
+	font-size: 90%;
+	height: @height2;
+	left: 0;
+	overflow: none;
+	padding: 16px 0;
+	position: fixed;
+	transition: all 0.3s ease-in-out;
+	width: @width1;
+	z-index: 300;
+	div.container {
+		line-height: 1.1;
+		text-align: left;
+	}
+	ul.navigation {
+		li {
+			display: block;
+			float: left;
+			margin-right: 10px;
+			a {
+				background-color: @color3;
+				border-radius: 3px;
+				color: @color4;
+				font-size: 90%;
+				padding: .2em 1em;
+				text-decoration: none;
+				&:hover {
+					background-color: @color5;
+					color: white;
+				}
+			}
+		}
+	}
+}
+#footerMenu.show {
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	bottom: 0;
+	height: @height1;
+	transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 480px) {
+    /* 480px以上用（タブレット／スマートフォン用）の記述 */
+    span#subtitle1 {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    span#subtitle2 {
+      display: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    /* 600px以上用（タブレット用）の記述 */
+    span#subtitle1 {
+      display: none;
+    }
+    span#subtitle2 {
+      display: inline-block;
+    }
+}
+@media screen and (min-width: 768px) {
+    /* 768px以上用（タブレット用）の記述 */
+    span#subtitle1 {
+      display: none;
+    }
+    span#subtitle2 {
+      display: inline-block;
+    }
+}
+@media screen and (min-width: 980px) {
+    /* 980px以上用（PC用）の記述 */
+    span#subtitle1 {
+      display: none;
+    }
+    span#subtitle2 {
+      display: inline-block;
+    }
+}

@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Libs\Common;
+use App\Http\Requests\ItemRequest;
 
 class SampleController extends Controller {
 
@@ -14,10 +16,28 @@ class SampleController extends Controller {
 	 */
 	public function index()
 	{
+
+ 		$pass = Common::makePassword(12);
+var_dump(Config::get('define.domain'));
+		//$catchcopy = Config::get('app.debug');
+		//$catchcopy = Config::get('define.catchcopy');
+	  //$submenu_list = Config::get('define.submenu_list');
+		//$request = $this->sample(1);
 		$first_name = "田中";
     $last_name  = "太郎";
-		return view('sample', compact('first_name','last_name'));
+		return view('sample', compact('first_name','last_name','pass'));
 	}
+
+	// get ItemRequest
+	public function sample(ItemRequest $request)
+  {
+    return $request;
+  }
+
+  public function test()
+  {
+    return "AOIUE";
+  }
 
 	/**
 	 * Show the form for creating a new resource.

@@ -66,12 +66,22 @@ DB port : 33060
 
 // 各種設定
 
-$ vagrant up
 $ cd /Volumes/work/Homestead
+$ vagrant up
 $ vagrant ssh
 # cd /vagrant/laravel
-# php artisan make:controller SampleController // コントローラーの作成
+# php artisan make:controller SampleController --plain // コントローラーの作成
 -- Route::resource('sample','SampleController'); // routes.phpに下記を追加
 -- // app/resources/viewsフォルダにsample.blade.php(ビューファイル)を作成
 # php artisan route:cache // ルートキャッシュ：Route::controller() Route::resource()等のルーティングの登録時間を短縮するために、app/Http/route.phpファイルを読み込む代わりに、キャシュされたルートファイルを登録利用する
 # php artisan route:clear // ルートキャッシュ削除
+
+// 新しいCLASS関数ファイルを作って登録する
+$ cd /Volumes/work/Homestead
+$ vagrant up
+$ vagrant ssh
+# cd /vagrant/laravel
+# composer dump-autoload
+-- うまくいかない時はcomposerをupdateしてみる
+# php composer.phar self-update
+

@@ -1,14 +1,9 @@
-@extends('common.layout')
-@section('addCss')
-<link href="{{asset('/css/app.css')}}" rel="stylesheet">
-@stop
-@include('common.header')
+@extends('common.master')
+@extends('common.nav')
+@extends('common.submenu')
 @section('content')
 <body>
     <h1>Hello</h1>
     <div>コンテンツ</div>
 @stop
-@section('addJs')
-<script type="text/javascript" src="{{asset('/js/nonovel.js')}}"></script>
-@stop
-@include('common.footer')
+

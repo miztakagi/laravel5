@@ -5,8 +5,7 @@ sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "js"
 output_style = "expanded"
-line_comments = false
-relative_assets = true
+
 Encoding.default_external = "utf-8"
 
 output_style = :expanded
