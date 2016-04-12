@@ -1,0 +1,95 @@
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ユーザID - 自動生成 [セッション保持]',
+  `username` varchar(10) COLLATE utf8_unicode_ci NOT NULL COMMENT 'ユーザ名 [セッション保持]',
+  `password` varchar(41) COLLATE utf8_unicode_ci NOT NULL COMMENT 'パスワード - PASSWORD(入力値+//+メールアドレス)',
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'メールアドレス - UNIQUE',
+  `address` text COLLATE utf8_unicode_ci NOT NULL COMMENT '住所 - 必須',
+  `profile` text COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'ユーザ情報',
+  `type` int(3) NOT NULL DEFAULT '0' COMMENT 'ユーザタイプ - 必須 [セッション保持] - 0:一般 1:投稿あり 2:特別 3:スタッフ 4:管理者 999:admin',
+  `login` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最終ログイン日時',
+  `login_hash` TINYTEXT COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'ログインHASH値 [セッション保持]',
+  `counter` INT NOT NULL DEFAULT '1' COMMENT 'アクセスカウント - UPDATE時に増やす',
+  `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '登録日時',
+  `modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日時',
+  `memo` text COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'メモ',
+  `status` int(3) NOT NULL DEFAULT '1' COMMENT 'ステータス - 1:通常 2〜:その他 900:ブラックリスト',
+  `active` int(3) NOT NULL DEFAULT '1' COMMENT 'アクティブ - 1:アクティブ 0:非アクティブ（登録抹消）',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8
+  COLLATE=utf8_unicode_ci
+  AUTO_INCREMENT=100
+
+CREATE TABLE `collections` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'コレクションID - 自動生成 [セッション保持]',
+  `title` TINYTEXT COLLATE utf8_unicode_ci NOT NULL COMMENT 'タイトル - 255文字以内',
+  `text` TEXT COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '内容説明',
+  `code` int(128) NOT NULL DEFAULT '0' COMMENT 'コード - int 128文字以内',
+  `save` TINYTEXT COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '保存場所',
+  `sort_id` int(10) NOT NULL DEFAULT '0' COMMENT 'ソート番号',
+  `image_id` int(128) NOT NULL DEFAULT '0' COMMENT 'イメージID',
+  `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '登録日時',
+  `modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日時',
+  `memo` text COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'メモ',
+  `status` int(3) NOT NULL DEFAULT '1' COMMENT 'ステータス - 1:通常 2〜:その他',
+  `active` int(3) NOT NULL DEFAULT '1' COMMENT 'アクティブ - 1:アクティブ 0:非アクティブ（登録抹消）',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code` (`code`)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8
+  COLLATE=utf8_unicode_ci
+
+
+
+INSERT INTO collections
+(
+	`title`,
+	`code`,
+	`sort_id`,
+	`image_id`,
+	`memo`
+) VALUES (
+	'タイトル1',
+	10001,
+	1,
+	30001,
+	'メモです'
+),(
+	'タイトル12',
+	10002,
+	1,
+	30002,
+	'メモです'
+),(
+	'タイトル3',
+	10003,
+	1,
+	30003,
+	'メモです'
+);
+
+INSERT INTO users
+(
+  `username`,
+  `password`,
+  `email`,
+  `address`,
+  `type`,
+  `memo`
+) VALUES (
+	'admin',
+	PASSWORD(concat('mews9909', '//', 'admin@nonovel.jp')),
+	'admin@nonovel.jp',
+	'札幌市',
+	999,
+	'メモです'
+);
+PASSWORD = *FDF9CC620B43CA2E301BA72B660E8DEB5B1FC437
+
+UPDATE users SET
+	username='admin2',
+	memo='新しいメモ',
+	counter=counter+1,
+	modified='2016-04-01 15:55:56'
+  WHERE id=100;

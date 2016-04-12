@@ -28,11 +28,11 @@
             @if (Auth::guest())
             @yield('menu')
             <div id="menu4" class="column smenu" data-role="ログイン">
-              <p class="circle modal-button" data-target="#modal_menu4"><i class="fa fa-fa-sign-in f-16"></i></p>
+              <p class="circle modal-button" data-target="#modal_menu4"><i class="fa fa-sign-in f-16"></i></p>
             </div>
             @else
             <div id="menu4" class="column smenu" data-role="マイページ">
-              <p class="circle modal-button" data-target="#modal_menu5"><i class="fa fa-fa-user f-16"></i></p>
+              <p class="circle modal-button" data-target="#modal_menu5"><i class="fa fa-user f-16"></i></p>
             </div>
             <div id="menu4" class="column smenu" data-role="ログアウト">
               <a href="{{ url('/auth/logout') }}"><i class="fa fa-sign-out"></i></a>
@@ -48,7 +48,9 @@
   </div>
 </section>
 <a class="header-item" href="{{ url('top') }}"><i class="fa fa-home"></i>トップ</a>
+@if (! Auth::guest())
 <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i>{{ Auth::user()->name }}さん</a>
+@endif
 <section>
 <div class="nav-search">
       <form id="search" name="search" method="post" action="{{ url('search') }}">

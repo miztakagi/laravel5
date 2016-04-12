@@ -1,3 +1,6 @@
+// virtual box 追加
+$ vagrant box add fuel-centos http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.7-x86_64-v20151108.box
+
 $ vagrant box add laravel/homestead
 $ cd /Volumes/work
 $ git clone https://github.com/laravel/homestead.git Homestead
@@ -64,6 +67,15 @@ DB port : 33060
 		],
 
 
+
+// MySQL テーブル定義変更
+（定義のみ変更）
+-- ALTER TABLE user MODIFY last_login datetime not null default now();
+-- ALTER TABLE user MODIFY created datetime not null default now();
+-- ALTER TABLE user MODIFY modified datetime not null default now() on update current_timestamp;
+（カラム名＋定義のみ変更）
+-- ALTER TABLE user CHANGE last_login login datetime NOT NULL DEFAULT current_timestamp;
+
 // 各種設定
 
 $ cd /Volumes/work/Homestead
@@ -84,4 +96,5 @@ $ vagrant ssh
 # composer dump-autoload
 -- うまくいかない時はcomposerをupdateしてみる
 # php composer.phar self-update
+
 

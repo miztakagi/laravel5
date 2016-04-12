@@ -16,6 +16,8 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('sample', 'SampleController@index');
+
 Route::get('top', function () {
     return View::make('top')
             ->with('title', 'TOP | nonovel.jp') // withでテンプレートに変数をセット
@@ -32,7 +34,7 @@ Route::controllers([
 | Example
 |--------------------------------------------------------------------------
 */
-Route::resource('sample','SampleController');
+//Route::resource('sample','SampleController');
 
 Route::post('foo/bar', function()
 {

@@ -1,0 +1,344 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"im",
+				"background-image"
+			],
+			[
+				"p",
+				"p	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Less/LESS-min.sublime-build",
+					""
+				],
+				[
+					"Packages/Less/LESS-min.sublime-build",
+					"Minify"
+				]
+			],
+			[
+				"Packages/Less/LESS-min.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Less/LESS.sublime-build",
+					""
+				],
+				[
+					"Packages/Less/LESS.sublime-build",
+					"Minify"
+				]
+			],
+			[
+				"Packages/Less/LESS.sublime-build",
+				"Minify"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Less/LESS.sublime-build",
+					""
+				],
+				[
+					"Packages/Less/LESS.sublime-build",
+					"Normal"
+				]
+			],
+			[
+				"Packages/Less/LESS.sublime-build",
+				"Normal"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Less/_LESS.sublime-build",
+					""
+				],
+				[
+					"Packages/Less/_LESS.sublime-build",
+					"Minify"
+				]
+			],
+			[
+				"Packages/Less/_LESS.sublime-build",
+				"Minify"
+			]
+		],
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				],
+				[
+					"Packages/Compass/Compass.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Compass/Compass.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 367.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/work/Homestead/fuel"
+	],
+	"file_history":
+	[
+		"/Volumes/work/Homestead/lalavel.sublime-project",
+		"/Volumes/work/Homestead/laravel/resources/views/common/nav.blade.php",
+		"/Volumes/work/Homestead/laravel/app/Http/Requests/ItemRequest.php",
+		"/Volumes/work/Homestead/laravel/_usege.txt",
+		"/Volumes/work/Homestead/laravel/app/Libs/Common.php",
+		"/Volumes/work/Homestead/laravel/config/app.php",
+		"/Volumes/work/Homestead/laravel/composer.json",
+		"/Volumes/work/Homestead/laravel/app/Lib/common.php",
+		"/Volumes/work/Homestead/laravel/app/Libs/commonClass.php",
+		"/Volumes/work/Homestead/laravel/app/commonClass.php",
+		"/Volumes/work/Homestead/laravel/app/Http/Controllers/SampleController.php",
+		"/Volumes/work/Homestead/laravel/app/Commands/Command.php",
+		"/Volumes/work/Homestead/laravel/public/css/tmp.less",
+		"/Volumes/work/Homestead/laravel/sysdata/nonovel_siteinfo.txt",
+		"/Volumes/work/Homestead/laravel/config/define.php",
+		"/Volumes/work/Homestead/laravel/config/broadcasting.php",
+		"/Volumes/work/Homestead/laravel/resources/views/common/master.blade.php",
+		"/Volumes/work/Homestead/laravel/public/js/nonovel.js",
+		"/Volumes/work/Homestead/laravel/.env",
+		"/Volumes/work/Homestead/laravel/sysdata/bookdata.txt",
+		"/Volumes/work/Homestead/laravel/resources/views/sample.blade.php",
+		"/Volumes/work/Homestead/laravel/resources/views/common/nomenu.blade.php",
+		"/Volumes/work/Homestead/laravel/resources/views/common/submenu.blade.php",
+		"/Volumes/work/Homestead/laravel/public/css/nonovel.css",
+		"/Volumes/work/Homestead/laravel/resources/assets/less/nonovel.less",
+		"/Volumes/work/Homestead/laravel/public/css/tmp.min.css",
+		"/Volumes/work/Homestead/laravel/resources/assets/less/nono.less",
+		"/Volumes/work/Homestead/laravel/resources/assets/less/nonovel.min.css",
+		"/Users/miz/Library/Application Support/Sublime Text 3/Packages/Less/LESS.sublime-build",
+		"/Volumes/work/Homestead/laravel/resources/views/app.blade.php",
+		"/Volumes/work/Homestead/laravel/resources/assets/sass/style.scss",
+		"/Users/miz/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/miz/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Volumes/work/Homestead/laravel/resources/views/common/menu01.blade.php",
+		"/Users/miz/.homestead/Homestead.yaml",
+		"/Volumes/work/Downloads/config.rb"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tw",
+			" is-2",
+			"}",
+			"vertical-align:",
+			"text-align: left;",
+			"float",
+			"-cd",
+			"heart",
+			"thumbnails",
+			"lines",
+			"show-"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 94.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Less/_LESS.sublime-build",
+	"project": "/Volumes/work/Homestead/fuel.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 287.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

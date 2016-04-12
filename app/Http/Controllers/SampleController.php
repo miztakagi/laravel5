@@ -14,6 +14,12 @@ class SampleController extends Controller {
 	 *
 	 * @return Response
 	 */
+
+	public function before()
+{
+	echo "BEFORE";
+}
+
 	public function index()
 	{
 
