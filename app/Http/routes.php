@@ -34,8 +34,11 @@ Route::controllers([
 | Example
 |--------------------------------------------------------------------------
 */
+<<<<<<< HEAD
 //Route::resource('sample','SampleController');
 
+=======
+>>>>>>> parent of 73f535d... 002
 Route::post('foo/bar', function()
 {
     return 'Hello World';
@@ -91,10 +94,4 @@ Route::get('user/{id}/{name}', function($id, $name)
 
 Route::group(['middleware' => ['web']], function () {
     //
-});
-
-Event::listen('404', function()
-{
-  return App::abort(404);
-  //return Response::error('404');
 });

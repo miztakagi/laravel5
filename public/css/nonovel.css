@@ -1,44 +1,20 @@
-html {
-  background-color: #ffffff;
-}
-body {
-  color: #82979f;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-}
-a:link {
-  color: #6499a2;
-}
-a:visited {
-  color: #6499a2;
-}
-a:active {
-  color: #6499a2;
-}
-a:hover {
-  color: #00a39a;
-}
-.button:hover {
-  border-color: #00a39a;
-  color: #00a39a;
-}
-.input:hover {
-  border-color: #00a39a;
-}
-.input:focus {
-  border-color: #00a39a;
-}
-span#subtitle1 {
-  display: inline-block;
-  margin-top: 10px;
-}
-span#subtitle2 {
-  display: none;
-}
-.container {
-  max-width: 1086px;
-}
+/*
+|--------------------------------------------------------------------------
+| nonovel.css
+|--------------------------------------------------------------------------
+|
+| nonovel.css original style-sheet
+| version 0.1 / 2016.04.05 / miz.takagi
+|
+*/
+
 .w100p {
   width: 100%;
+}
+
+#container {
+  width: 100%;
+  text-align: center;
 }
 .f90p {
   font-size: 90%;

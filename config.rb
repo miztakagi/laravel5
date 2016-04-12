@@ -1,14 +1,12 @@
-# Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "css"
 sass_dir = "sass"
-images_dir = "img"
+images_dir = "images"
 javascripts_dir = "js"
+
 output_style = "expanded"
 
 Encoding.default_external = "utf-8"
-
-output_style = :expanded
 
 on_stylesheet_saved do |filename|
 	if File.exists?(filename)
