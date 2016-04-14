@@ -34,11 +34,9 @@ Route::controllers([
 | Example
 |--------------------------------------------------------------------------
 */
-<<<<<<< HEAD
-//Route::resource('sample','SampleController');
 
-=======
->>>>>>> parent of 73f535d... 002
+Route::resource('sample','SampleController');
+
 Route::post('foo/bar', function()
 {
     return 'Hello World';

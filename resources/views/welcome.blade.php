@@ -41,6 +41,9 @@
                 font-size: 22px;
                 font-family: "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic", Avenir, Roboto, sans-serif;
             }
+            .quote {
+                font-size: 24px;
+            }
         </style>
     </head>
     <body>
@@ -48,7 +51,10 @@
             <div class="content">
                 <div class="title">nonovel.jp</div>
                 <div class="subtitle">ののべる.jp : デジタル書籍出版サービス</div>
+                <hr>
+                <div class="title">Laravel 5</div>
+                <div class="quote">{{ Inspiring::quote() }}</div>
             </div>
         </div>
-    </body>
+	</body>
 </html>
